@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
   <title>GitHub Repo Search</title>
 </head>
 <body>
   <section class="container">
-    <form action="search" method="get">
-      <label for="input">Find a username</label>
-      <input type="text" name="input" class="search-input">
+    <form>
+      <label for="input">Enter GitHub username</label>
+      <input type="text" name="input" class="search-input" placeholder="username here">
       <input type="submit" roll="button" class="submit" value="Display Repo's">
     </form>
+    <section class="results"></section>
   </section>
-  
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 </html>
