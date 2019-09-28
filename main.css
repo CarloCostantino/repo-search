@@ -18,3 +18,7 @@ form {
   align-items: center;
   max-width: 500px;
 }
+
+.hidden {
+  visibility: hidden;
+}

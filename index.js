@@ -13,7 +13,15 @@ function handleSubmit(username) {
       if (responce.ok) {
         return responce.json();
       }
-    }
+      $("p.error").removeClass("hidden");
+    })
+    .then(responceJson => {
+      console.log(responceJson)
+      for (let i = 0; i < responceJson.length; i++) {
+        $(".results").append(`<h2><a target="_blank" href='${responceJson[i].html_url}'>${responceJson[i].name}</a></h2>`)
+      }
+      $('.results').removeClass('hidden')
+    })
 }
 
 function waitForSubmit() {
