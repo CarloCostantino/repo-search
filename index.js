@@ -11,16 +11,17 @@ function handleSubmit(username) {
   fetch(renderResults(baseURL,username))
     .then(responce => {
       if (responce.ok) {
+        $(".error").addClass("hidden");
         return responce.json();
       }
-      $("p.error").removeClass("hidden");
+      $(".error").removeClass("hidden");
     })
     .then(responceJson => {
-      console.log(responceJson)
+      $(".js-results-list").empty();
       for (let i = 0; i < responceJson.length; i++) {
-        $(".results").append(`<h2><a target="_blank" href='${responceJson[i].html_url}'>${responceJson[i].name}</a></h2>`)
+        $(".js-results-list").append(`<li><h2><a target="_blank" href='${responceJson[i].html_url}'>${responceJson[i].name}</a></h2></li>`)
       }
-      $('.results').removeClass('hidden')
+      $('.js-results').removeClass('hidden')
     })
 }
 

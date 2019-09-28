@@ -2,21 +2,41 @@
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
   margin: 0px;
-  margin-top: 20px;
 }
 
-section {
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
+  padding: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   max-width: 500px;
+  margin-bottom: 50px;
+}
+
+label, input {
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .hidden {
